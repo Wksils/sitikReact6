@@ -1,0 +1,27 @@
+@use '../style_layout.scss' as lm;
+
+footer{
+    @extend %base-layout;
+    height: 50vh;
+    background-color: #FFF8F8;
+    .container{
+        @include lm.container-layout(80%, 80%);
+        .left{
+            @include lm.container-layout-column(50%, 80%);
+            img{ width: 30%; height: auto;}
+            p{font-size: 1.5rem; width: 80%;}
+            div{
+                @include lm.container-layout(20%, 10%);
+                img{height: 100%; width: auto;}
+            }
+        }
+        .right{
+            @include lm.container-layout(40%, 80%);
+            ul{
+                list-style: none;
+                @include lm.container-layout-column(40%, 70%);
+                li{font-size: 1.3rem;}:first-child{font-weight: 600; margin-bottom: 10px;}
+            }
+        }
+    }
+}

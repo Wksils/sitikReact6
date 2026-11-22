@@ -1,0 +1,41 @@
+@use '../style_layout.scss' as lm;
+
+.sect3{
+    @extend %base-layout;
+    height: 100vh;
+    background-color: #FFF8F8;
+    .container{
+        @include lm.container-layout-column(80%, 80%);
+        align-items: center;
+        h2{
+            background: linear-gradient(90deg, #81008C 0%, #540096 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+            font-size: 2.5rem;
+        }
+        a{align-self: end; color: #E35050; font-size: 1.3rem;}
+        .cards{
+            @include lm.container-layout(100%, 80%);
+            .card{
+                @include lm.container-layout-column(30%, 80%);
+                background-color: white;
+                border-radius: 15px;
+                padding: 2% 1%;
+                .title{
+                    font-weight: 700;
+                    font-size: 1.4rem;
+                }
+                p{font-size: 1.3rem; width: 90%;}
+                div{
+                    @include lm.container-layout(100%, 10%);
+                    button{
+                        @include lm.purpleBtn(60%, 100%);
+                    }
+                }
+            }
+        }
+    }
+}

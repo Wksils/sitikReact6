@@ -1,0 +1,51 @@
+@use '../style_layout.scss' as lm;
+
+.sect4{
+    @extend %base-layout;
+    height: 100vh;
+    background-color: #FFF8F8;
+    .container{
+        @include lm.container-layout-column(80%, 80%);
+        align-items: center;
+        h2{
+            background: linear-gradient(90deg, #81008C 0%, #540096 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+            font-size: 2.5rem;
+        }
+        .cards{
+            @include lm.container-layout(100%, 80%);
+            .card1, .card2, .card3{
+                @include lm.container-layout-column(30%, 80%);
+                background-color: white;
+                border-radius: 15px;
+                padding: 2% 1%;
+                div{
+                    @include lm.container-layout-column(100%, 100%);
+                    background-size: cover;
+                    border-radius: 15px;
+                    padding: 3% 5%;
+                    .date{
+                        background-color: rgba(255, 255, 255, 0.5);
+                        width: 20%;
+                        height: 15%;
+                        border-radius: 10px;
+                        color: white;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 1.4rem;
+                        text-align: center;
+                    }
+                    p{color: white; font-weight: 700; font-size: 1.5rem;}
+                }
+            }
+            .card1{div{background-image: url(../../assets/card4.png);}}
+            .card2{div{background-image: url(../../assets/card5.png);}}
+            .card3{div{background-image: url(../../assets/card6.png);}}
+        }
+    }
+}

@@ -1,0 +1,29 @@
+@use '../style_layout.scss' as lm;
+
+.sect2{
+    background-image: url(../../assets/bac.png);
+    background-size: cover;
+    background-color: #FFE7E7;
+    background-repeat: no-repeat;
+    @extend %base-layout;
+    height: 100vh;
+    .container{
+        @include lm.container-layout(80%, 80%);
+        .left{
+            @include lm.container-layout-column(50%, 25%);
+            p{font-size: 1.5rem;}
+            h2{color: #E35050;
+            font-weight: 600;
+            font-size: 3rem;
+            width: 80%;}
+        }
+        .right{
+            @include lm.container-layout-column(70%, 25%);
+            div{
+                @include lm.container-layout(100%, 30%);
+                text-align: center;
+                p{width: 30%; font-size: 1.3rem;}
+            }
+        }
+    }
+}

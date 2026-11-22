@@ -1,0 +1,26 @@
+@use '../style_layout.scss' as lm;
+
+header{
+    @extend %base-layout;
+    height: 10vh;
+    background-color: #FFE7E7;
+    align-items: start;
+    nav{
+        @include lm.container-layout(80%, 90%);
+        background-color: white;
+        padding: 0 3%;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        box-shadow: 0 5px 15px 0 rgba(206, 68, 228, 0.5);
+         a{font-size: 1.3rem;}
+        .navigation{
+            @include lm.container-layout(30%, 80%);
+        }
+        .login{
+            @include lm.container-layout(18%, 80%);
+            div{
+                @include lm.container-layout(30%, 100%);
+            }
+        }
+    }
+}

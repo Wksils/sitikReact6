@@ -1,0 +1,44 @@
+@use '../style_layout.scss' as lm;
+
+.sect5{
+    @extend %base-layout;
+    height: 100vh;
+    background-color: #FFF8F8;
+    .container{
+        @include lm.container-layout-column(80%, 80%);
+        align-items: center;
+        h2{
+            background: linear-gradient(90deg, #81008C 0%, #540096 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+            font-size: 2.5rem;
+        }
+        .cards{
+            @include lm.container-layout(100%, 80%);
+            .card{
+                @include lm.container-layout-column(48%, 60%);
+                box-shadow: 0 5px 15px 0 rgba(206, 68, 228, 0.5);
+                background-color: white;
+                border-radius: 15px;
+                padding: 2% 3%;
+                padding-bottom: 6%;
+                p{font-size: 1.5rem}
+                .info{
+                    @include lm.container-layout(100%, 35%);
+                    div{
+                        @include lm.container-layout-column(75%, 55%);
+                    }
+                    h3{font-size: 1.6rem;}
+                    p{font-size: 1.4rem;}
+                    img{
+                        height: 100%;
+                        width: auto;
+                    }
+                }
+            }
+        }
+    }
+}
